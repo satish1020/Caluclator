@@ -7,41 +7,42 @@ export const OPERATIONS_ENUM = {
     EQUAL: '=',
     DELETE:'delete',
     STORE: 'store',
-    TOOGLE: 'toggle',
-    CLEAR: 'clear'
+    TOGGLE: 'toggle',
+    CLEAR: 'clear',
+    MEMORY: 'memory'
 }
 
 export const config = {
     calculator_layout: [
-        [ 
-            {displayValue: 'AC', value: OPERATIONS_ENUM.CLEAR},
-            {displayValue: '+/-', value: OPERATIONS_ENUM.TOOGLE},
-            {displayValue: 'Ans', value: OPERATIONS_ENUM.STORE},
-            {displayValue: '/', value: OPERATIONS_ENUM.DIVIDE},
+        [
+            {displayValue: 'AC', value: OPERATIONS_ENUM.CLEAR, type:"operator"},
+            {displayValue: '+/-', value: OPERATIONS_ENUM.TOGGLE, type:"operator"},
+            {displayValue: 'M', value: OPERATIONS_ENUM.MEMORY, type:"operator"},
+            {displayValue: '/', value: OPERATIONS_ENUM.DIVIDE, type:"operator"},
         ],
-        [ 
-            {displayValue: '7', value: 7},
-            {displayValue: '8', value: 8},
-            {displayValue: '9', value: 9},
-            {displayValue: '*', value: OPERATIONS_ENUM.MULTIPLY},
+        [
+            {displayValue: '7', value: '7', type:"number"},
+            {displayValue: '8', value: '8', type:"number"},
+            {displayValue: '9', value: '9', type:"number"},
+            {displayValue: '*', value: OPERATIONS_ENUM.MULTIPLY, type:"operator"},
         ],
-        [ 
-            {displayValue: '4', value: 4},
-            {displayValue: '5', value: 5},
-            {displayValue: '6', value: 6},
-            {displayValue: '-', value: OPERATIONS_ENUM.SUBTRACT},
+        [
+            {displayValue: '4', value: '4', type:"number"},
+            {displayValue: '5', value: '5', type:"number"},
+            {displayValue: '6', value: '6', type:"number"},
+            {displayValue: '-', value: OPERATIONS_ENUM.SUBTRACT, type:"operator"},
         ],
-        [ 
-            {displayValue: '1', value: 1},
-            {displayValue: '2', value: 2},
-            {displayValue: '3', value: 3},
-            {displayValue: '+', value: OPERATIONS_ENUM.ADD},
+        [
+            {displayValue: '1', value: '1', type:"number"},
+            {displayValue: '2', value: '2', type:"number"},
+            {displayValue: '3', value: '3', type:"number"},
+            {displayValue: '+', value: OPERATIONS_ENUM.ADD, type:"operator"},
         ],
-        [ 
-            {displayValue: '0', value: 0},
-            {displayValue: '.', value: '.'},
-            {displayValue: '=', value: OPERATIONS_ENUM.EQUAL},
-            {displayValue: 'del', value: OPERATIONS_ENUM.DELETE},
+        [
+            {displayValue: '0', value: '0', type:"number"},
+            {displayValue: '.', value: '.', type:"operator"},
+            {displayValue: '=', value: OPERATIONS_ENUM.EQUAL, type:"operator"},
+            {displayValue: 'del', value: OPERATIONS_ENUM.DELETE, type:"operator"},
         ],
     ]
 }
