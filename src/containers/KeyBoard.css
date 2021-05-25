@@ -1,0 +1,13 @@
+.KeyBoard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 80%;
+}
+
+.row {
+    width: 50%;
+    height: 80;
+    display: flex;
+    flex-direction: row;
+}
