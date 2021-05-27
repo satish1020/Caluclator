@@ -1,6 +1,6 @@
 import React from 'react';
 import { config }  from '../Utils/Config';
-import Button from '../components/Button';
+import Button from './Button';
 import "./KeyBoard.css";
 
 const layout = config.calculator_layout;
